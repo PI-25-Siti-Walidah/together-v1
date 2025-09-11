@@ -5,8 +5,6 @@
   color: #fff;
   padding: 50px 40px 30px;
   font-family: "Poppins", sans-serif;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 /* Container pakai flex biar bisa control kanan kiri */
@@ -16,7 +14,7 @@
   display: flex;
   justify-content: space-between; /* kiri - kanan */
   align-items: flex-start;
-  gap: 50px;
+  gap: 700px;
 }
 
 /* Contact Us & Social Media Title */
@@ -52,7 +50,7 @@
   flex-direction: column; /* biar bisa atur judul, icon, teks */
   align-items: flex-start; /* rata kiri */
   flex: 1;
-  padding-left: 50px;
+  padding-left: auto;
 
 }
 
@@ -85,7 +83,7 @@
 }
 
 /* ✅ Responsive Tablet */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .footer-container {
     flex-direction: row; /* tetap kiri-kanan */
     justify-content: space-between;
@@ -99,7 +97,7 @@
 }
 
 /* ✅ Responsive Mobile */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .footer {
     padding: 30px 20px;
   }
