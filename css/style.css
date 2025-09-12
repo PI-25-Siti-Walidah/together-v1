@@ -19,10 +19,49 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between; /* kiri-kanan di desktop */
   align-items: flex-start;
-  gap: 50px; /* cukup 30–50px */
+  gap: 50px;
 }
+
+/* pastikan kanan "menempel" ke kanan tetapi isi tetap rata-kiri */
+.footer-left {
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.footer-right {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end; /* dorong blok kanan ke ujung kanan */
+  align-items: flex-start;
+}
+
+/* isi di dalam footer-right tetap rata kiri */
+.footer-right .inner {
+  text-align: left;
+  width: 100%;
+  max-width: 420px; /* batasi lebar agar tidak melebar ke tengah */
+}
+
+/* Responsive: tablet & mobile -> stack kolom agar fleksibel */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .footer-right {
+    justify-content: flex-start; /* kembalikan normal saat stack */
+  }
+
+  .footer-right .inner {
+    max-width: 100%;
+  }
+}
+
+/* ...existing code... */
 
 /* Contact Us & Social Media Title */
 .footer-left h3,
