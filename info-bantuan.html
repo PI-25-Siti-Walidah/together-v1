@@ -18,7 +18,7 @@
 </head>
 
 <body class="bg-pink-50 font-sans">
-  
+
   <!-- Ini tempat navbar otomatis -->
   <div id="navbar-container"></div>
 
@@ -27,7 +27,8 @@
     <h1 class="font-bold text-3xl text-[#701A42] p-2">Informasi Bantuan</h1>
     <p class="text-lg text-[#701A42] p-2">Temukan informasi bantuan yang sesuai dengan kebutuhan dan situasi Anda.</p>
     <div class="drop-down mt-4">
-      <select name="filter-bantuan" id="filter-bantuan" class="rounded-md border border-[#701A42] p-4 pr-10 w-[500px] text-[#701A42]">
+      <select name="filter-bantuan" id="filter-bantuan"
+        class="rounded-md border border-[#701A42] p-4 pr-10 w-[500px] text-[#701A42]">
         <option value="pilih-kategori" disabled selected class="text-[#701A42]">Pilih Kategori</option>
         <option value="bantuan-ekonomi" class="text-[#701A42]">Bantuan Ekonomi</option>
         <option value="kesehatan" class="text-[#701A42]">Kesehatan</option>
@@ -40,31 +41,136 @@
 
   <!-- Ini menampilkan card/macam2 informasi bantuan -->
   <div>
-    <div class="card1 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
+
+
+    <!-- CARD 1 -->
+    <div
+      class="card1 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
       <img src="assets/images/bantuan/bantuan-5.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md">
       <!-- ini berisi seluruh text -->
       <div class="flex flex-col p-4">
         <!-- ini berisi logo dan nama perusahaan -->
         <div class="flex items-center gap-4 mb-2">
-          <img src="assets/images/perusahan-logo/p-logo-1.png" alt="logo perusahaan" class="w-7 h-7 rounded-full"
-            >
+          <img src="assets/images/perusahan-logo/p-logo-1.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
           <p class="text-sm">Yayasan Perempuan Indoseia Sejahtera</p>
         </div>
         <!-- ini berisi kategori, judul, testimoni -->
-         <div class="gap-2 mb-4">
-           <p class="text-sm text-[#701A42] font-semibold">Bantuan Ekonomi</p>
-           <h3 class="text-xl font-bold">Voucher Sembako</h3>
-           <p class="text-xs text-[#701A42] ">10 Testimoni penerima</p>
-         </div>
-        <button class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
-                Detail Bantuan
-              </button>
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Bantuan Ekonomi</p>
+          <h3 class="text-xl font-bold">Voucher Sembako</h3>
+          <p class="text-xs text-[#701A42] ">10 Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
       </div>
     </div>
-    <div class="card2"></div>
-    <div class="card3"></div>
-    <div class="card4"></div>
-    <div class="card5"></div>
+
+
+    <!-- CARD 2 -->
+    <div
+      class="card2 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
+      <img src="assets/images/bantuan/bantuan-1.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-2.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Perempuan Indoseia Sejahtera</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Kesehatan</p>
+          <h3 class="text-xl font-bold">Medical Checkup</h3>
+          <p class="text-xs text-[#701A42] ">47 Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CARD 3 -->
+  <div
+    class="card2 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
+    <img src="assets/images/bantuan/bantuan-2.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md">
+    <!-- ini berisi seluruh text -->
+    <div class="flex flex-col p-4">
+      <!-- ini berisi logo dan nama perusahaan -->
+      <div class="flex items-center gap-4 mb-2">
+        <img src="assets/images/perusahan-logo/p-logo-1.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+        <p class="text-sm">Yayasan Perempuan Sehat</p>
+      </div>
+      <!-- ini berisi kategori, judul, testimoni -->
+      <div class="gap-2 mb-4">
+        <p class="text-sm text-[#701A42] font-semibold">Pendidikan Anak</p>
+        <h3 class="text-xl font-bold">Dana Bantuan Seragam Sekolah</h3>
+        <p class="text-xs text-[#701A42] ">100+ Testimoni penerima</p>
+      </div>
+      <button
+        class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+        Detail Bantuan
+      </button>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- CARD 4 -->
+  <div
+    class="card2 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
+    <img src="assets/images/bantuan/bantuan-3.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md">
+    <!-- ini berisi seluruh text -->
+    <div class="flex flex-col p-4">
+      <!-- ini berisi logo dan nama perusahaan -->
+      <div class="flex items-center gap-4 mb-2">
+        <img src="assets/images/perusahan-logo/p-logo-3.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+        <p class="text-sm">Yayasan Indoseia</p>
+      </div>
+      <!-- ini berisi kategori, judul, testimoni -->
+      <div class="gap-2 mb-4">
+        <p class="text-sm text-[#701A42] font-semibold">Modal Usaha</p>
+        <h3 class="text-xl font-bold">Suntik Dana</h3>
+        <p class="text-xs text-[#701A42] ">8 Testimoni penerima</p>
+      </div>
+      <button
+        class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+        Detail Bantuan
+      </button>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- CARD 5 -->
+  <div
+    class="card2 w-[350px] h-[450px] flex flex-col rounded-lg border border-gray-400 m-4 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer">
+    <img src="assets/images/bantuan/bantuan-4.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md">
+    <!-- ini berisi seluruh text -->
+    <div class="flex flex-col p-4">
+      <!-- ini berisi logo dan nama perusahaan -->
+      <div class="flex items-center gap-4 mb-2">
+        <img src="assets/images/perusahan-logo/p-logo-2.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+        <p class="text-sm">Yayasan Perempuan Sehat</p>
+      </div>
+      <!-- ini berisi kategori, judul, testimoni -->
+      <div class="gap-2 mb-4">
+        <p class="text-sm text-[#701A42] font-semibold">Pelatihan</p>
+        <h3 class="text-xl font-bold">Dasar Menjahit</h3>
+        <p class="text-xs text-[#701A42] ">200+ Testimoni penerima</p>
+      </div>
+      <button
+        class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+        Detail Bantuan
+      </button>
+    </div>
+  </div>
+
+  </div>
 
   </div>
 
