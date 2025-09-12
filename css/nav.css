@@ -1,0 +1,230 @@
+/* Navbar Utama */
+.navbar {
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #FFF9F7;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo & Wordmark */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  font-family: "Playfair Display", serif;
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo-text .toher {
+  color: #313131;
+}
+
+.logo-text .get {
+  color: #6D123F;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #6D123F;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #7A7A7A;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #6D123F;
+  padding-bottom: 2px;
+}
+
+.side-links a.active {
+  border: 2px solid #6D123F;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+
+/* Account */
+.account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background: #6D123F;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.username {
+  color: #6D123F;
+  font-weight: 500;
+}
+
+/* Hamburger menu */
+.menu-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #6D123F;
+  cursor: pointer;
+  display: none;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 900;
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: #FFF9F7;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+}
+
+.close-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #6D123F;
+  cursor: pointer;
+}
+
+/* Profile - Side Menu */
+.profile {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.avatar-lg {
+  width: 64px;
+  height: 64px;
+  background: #6D123F;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.profile-name {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6D123F;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #7A7A7A;
+}
+
+/* Links - Side Menu */
+.side-links {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.side-links a {
+  color: #6D123F;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.side-links a:hover {
+  color: #7A7A7A;
+}
+
+/* Footer Wordmark - side menu */
+.side-footer {
+  margin-top: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+  .nav-links,
+  .account {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
