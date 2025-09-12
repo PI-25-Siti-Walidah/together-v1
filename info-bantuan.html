@@ -11,21 +11,35 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+    <!-- CSS Navbar -->
+  <link rel="stylesheet" href="css/nav.css">
   <!-- Link Tailwind CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-pink-50 font-sans">
   <!-- Ini tempat navbar otomatis -->
   <div id="navbar-container"></div>
 
-  <!-- Ini menampilkan isi informasi bantuan -->
-  <div class="info-container">
-    <h1>Informasi Bantuan</h1>
-    <p>Temukan informasi bantuan yang sesuai dengan kebutuhan dan situasi Anda.</p>
+  <!-- Ini menampilkan filter informasi bantuan -->
+  <div class="flex flex-col items-center p-8">
+    <h1 class="font-bold text-3xl text-[#701A42] p-2">Informasi Bantuan</h1>
+    <p class="text-lg text-[#701A42] p-2">Temukan informasi bantuan yang sesuai dengan kebutuhan dan situasi Anda.</p>
+    <div class="drop-down mt-4">
+      <select name="filter-bantuan" id="filter-bantuan" class="rounded-md border border-gray-300 p-4 pr-10 w-[500px]">
+        <option value="pilih-kategori" disabled selected class="text-[#701A42]">Pilih Kategori</option>
+        <option value="bantuan-ekonomi" class="text-[#701A42]">Bantuan Ekonomi</option>
+        <option value="kesehatan" class="text-[#701A42]">Kesehatan</option>
+        <option value="modal-usaha" class="text-[#701A42]">Modal Usaha</option>
+        <option value="pelatihan" class="text-[#701A42]">Pelatihan</option>
+        <option value="pendidikan-anak" class="text-[#701A42]">Pendidikan Anak</option>
+      </select>
+    </div>
   </div>
 
 
+
+  <footer id="footer"></footer>
   <!-- Script Navbar -->
   <script src="js/nav.js"></script>
 </body>
