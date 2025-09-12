@@ -1,3 +1,11 @@
+  /* hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
 
 /* FOOTER */
 .footer {
@@ -7,14 +15,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Container pakai flex biar bisa control kanan kiri */
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between; /* kiri - kanan */
+  justify-content: space-between; 
   align-items: flex-start;
-  gap: 700px;
+  gap: 50px; /* cukup 30–50px */
 }
 
 /* Contact Us & Social Media Title */
