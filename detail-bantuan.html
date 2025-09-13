@@ -4,15 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Bantuan | ToGetHer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/nav.css" />
+
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome (ikon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
     <script src="js/nav.js" defer></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
+
   <body class="font-sans text-gray-800">
-    <!-- NAVBAR -->
+    <!-- Navbar -->
     <div id="navbar-container"></div>
 
-    <!-- CONTENT -->
+    <!-- Content -->
     <main class="pt-16 pb-16 px-6 max-w-7xl mx-auto">
       <!-- Judul & Info -->
       <div class="mb-8 text-center">
@@ -154,5 +186,8 @@
         </aside>
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
   </body>
 </html>
