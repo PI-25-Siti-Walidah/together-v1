@@ -4,11 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Bantuan | ToGetHer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/nav.css" />
     <script src="js/nav.js" defer></script>
   </head>
-  <body>
+  <body class="font-sans text-gray-800">
     <!-- NAVBAR -->
     <div id="navbar-container"></div>
+
+    <!-- CONTENT -->
+    <main class="pt-16 pb-16 px-6 max-w-7xl mx-auto">
+      <!-- Judul & Info -->
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-bold text-[#6D123F]">Voucher Sembako</h2>
+        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+          Program bantuan ekonomi berupa voucher sembako untuk keluarga kurang
+          mampu di berbagai wilayah Indonesia.
+        </p>
+      </div>
+
+      <!-- Gambar utama -->
+      <div class="mb-10">
+        <img
+          src="assets/images/bantuan/bantuan-5.jpg"
+          alt="Voucher Sembako"
+          class="w-full rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Detail konten -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Artikel utama -->
+        <article
+          class="lg:col-span-2 space-y-8 bg-white p-6 rounded-2xl shadow-md"
+        >
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-[#6D123F]">Deskripsi</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Program
+              <span class="font-semibold">Voucher Sembako</span> merupakan salah
+              satu bentuk bantuan ekonomi yang diberikan kepada keluarga kurang
+              mampu, khususnya perempuan kepala rumah tangga. Program ini
+              bertujuan untuk meringankan beban kebutuhan pokok sehari-hari dan
+              meningkatkan ketahanan pangan keluarga. <br /><br />
+              Setiap penerima bantuan berhak mendapatkan
+              <span class="font-semibold">voucher senilai Rp 500.000</span>
+              yang dapat ditukarkan dengan kebutuhan pokok (beras, minyak
+              goreng, telur, gula, dll.) di minimarket maupun pasar tradisional
+              yang telah bekerja sama dengan ToGetHer.
+              <br /><br />
+              Dengan adanya program ini, diharapkan keluarga penerima tidak
+              hanya dapat memenuhi kebutuhan dasar, tetapi juga memiliki
+              kesempatan untuk lebih fokus pada pengembangan keluarga,
+              pendidikan anak, serta peningkatan kualitas hidup.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-[#6D123F]">
+              Syarat & Ketentuan
+            </h3>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>
+                Berstatus
+                <span class="font-medium">keluarga kurang mampu</span> dengan
+                penghasilan di bawah Rp 2.000.000 per bulan.
+              </li>
+              <li>
+                Memiliki
+                <span class="font-medium">Kartu Tanda Penduduk (KTP)</span> dan
+                <span class="font-medium">Kartu Keluarga (KK)</span> yang masih
+                berlaku.
+              </li>
+              <li>
+                Belum menerima bantuan serupa dari program pemerintah atau
+                lembaga lain dalam periode yang sama.
+              </li>
+              <li>
+                Bersedia mengikuti proses
+                <span class="font-medium">verifikasi data</span> yang dilakukan
+                oleh tim ToGetHer.
+              </li>
+              <li>
+                Voucher hanya berlaku pada periode program yang telah ditentukan
+                dan tidak dapat diuangkan.
+              </li>
+              <li>
+                Penerima wajib menggunakan voucher di
+                <span class="font-medium">mitra toko resmi</span> yang telah
+                bekerja sama dengan ToGetHer.
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <!-- Box Info -->
+          <div class="bg-white border rounded-2xl shadow-md p-6">
+            <h4 class="font-semibold text-lg mb-3 text-[#6D123F]">
+              Dukungan Ini Hadir Untukmu
+            </h4>
+            <p class="text-sm text-gray-600 mb-4">
+              Daftarkan dirimu sekarang dan akses bantuan dengan mudah.
+            </p>
+            <button
+              id="openModal"
+              class="block w-full text-center bg-[#6D123F] text-white px-4 py-2 rounded-xl hover:bg-[#5a0f33] transition"
+            >
+              Daftar Sekarang
+            </button>
+          </div>
+
+          <!-- Testimoni Penerima Lain -->
+          <div class="bg-white rounded-2xl shadow-md p-6">
+            <h4 class="font-semibold text-lg mb-3 text-[#6D123F]">
+              Testimoni Penerima Lain
+            </h4>
+            <div class="space-y-4">
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Bantuan ini sangat meringankan beban keluarga saya."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – Siti, Jakarta
+                </p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Saya sangat terbantu karena bisa mencukupi kebutuhan pangan
+                  keluarga saya."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – Ayu, Bandung
+                </p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Voucher sembako ini membuat saya lebih tenang, karena
+                  kebutuhan pokok anak-anak bisa tercukupi tanpa harus
+                  berhutang."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – Siti, Medan
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
   </body>
 </html>
