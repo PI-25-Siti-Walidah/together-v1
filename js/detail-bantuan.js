@@ -171,6 +171,22 @@ document
     }
   });
 
+function showMessage(msg, type = "info") {
+  Swal.fire({
+    title:
+      type === "success"
+        ? "Berhasil!"
+        : type === "error"
+        ? "Gagal!"
+        : "Informasi",
+    text: msg,
+    icon: type,
+    confirmButtonText: "OK",
+    confirmButtonColor:
+      type === "success" ? "#16a34a" : type === "error" ? "#dc2626" : "#6D123F",
+  });
+}
+
 async function loadProvinsi() {
   const res = await fetch(
     "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json"
