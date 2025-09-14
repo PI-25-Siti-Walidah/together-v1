@@ -9,8 +9,10 @@ const submitBtn = document.getElementById("submitBtn");
 
 const punyaRumah = document.getElementById("punyaRumah");
 const statusRumahField = document.getElementById("statusRumahField");
+const statusRumah = document.getElementById("statusRumah");
 const bekerja = document.getElementById("bekerja");
-const pendapatanIstriField = document.getElementById("pendapatanIstriField");
+const pendapatanField = document.getElementById("pendapatanField");
+const pendapatan = document.getElementById("pendapatan");
 
 const jumlahTanggungan = document.getElementById("jumlahTanggungan");
 const tanggunganContainer = document.getElementById("tanggunganContainer");
@@ -89,12 +91,26 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-punyaRumah.addEventListener("change", (e) => {
-  statusRumahField.classList.toggle("hidden", e.target.value !== "ya");
+punyaRumah.addEventListener("change", () => {
+  if (punyaRumah.value === "ya") {
+    statusRumahField.classList.remove("hidden");
+    statusRumah.setAttribute("required", "true");
+  } else {
+    statusRumahField.classList.add("hidden");
+    statusRumah.removeAttribute("required");
+    statusRumah.value = "";
+  }
 });
 
-bekerja.addEventListener("change", (e) => {
-  pendapatanIstriField.classList.toggle("hidden", e.target.value !== "ya");
+bekerja.addEventListener("change", () => {
+  if (bekerja.value === "ya") {
+    pendapatanField.classList.remove("hidden");
+    pendapatan.setAttribute("required", "true");
+  } else {
+    pendapatanField.classList.add("hidden");
+    pendapatan.removeAttribute("required");
+    pendapatan.value = "";
+  }
 });
 
 jumlahTanggungan.addEventListener("input", (e) => {
@@ -102,30 +118,19 @@ jumlahTanggungan.addEventListener("input", (e) => {
   const jumlah = parseInt(e.target.value) || 0;
   for (let i = 1; i <= jumlah; i++) {
     tanggunganContainer.innerHTML += `
-        <div class="border p-3 rounded-lg">
-          <h4 class="font-semibold mb-2">Tanggungan ${i}</h4>
-          <label class="block text-sm">Umur</label>
-          <input type="number" class="w-full border rounded px-3 py-2 mb-2" required />
-          <label class="block text-sm">Status</label>
-          <select class="w-full border rounded px-3 py-2 mb-2" required>
-            <option value="">Pilih</option>
-            <option value="sekolah">Ber-sekolah</option>
-            <option value="tidak">Tidak</option>
-          </select>
-        </div>
-      `;
+      <div class="border p-3 rounded-lg">
+        <h4 class="font-semibold mb-2">Tanggungan ${i}</h4>
+        <label class="block text-sm">Umur</label>
+        <input type="number" name="tanggunganUmur${i}" class="w-full border rounded px-3 py-2 mb-2" required />
+        <label class="block text-sm">Status</label>
+        <select name="tanggunganStatus${i}" class="w-full border rounded px-3 py-2 mb-2" required>
+          <option value="">Pilih</option>
+          <option value="sekolah">Ber-sekolah</option>
+          <option value="tidak">Tidak</option>
+        </select>
+      </div>
+    `;
   }
-});
-
-// Handle submit
-document.getElementById("daftarForm").addEventListener("submit", function (e) {
-  if (!validateStep(currentStep)) {
-    e.preventDefault();
-    return;
-  }
-  e.preventDefault();
-  alert("Pendaftaran berhasil dikirim!");
-  modal.classList.add("hidden");
 });
 
 async function loadProvinsi() {
@@ -135,7 +140,7 @@ async function loadProvinsi() {
   const data = await res.json();
   const provinsiSelect = document.getElementById("provinsi");
   data.forEach((prov) => {
-    provinsiSelect.innerHTML += `<option value="${prov.id}">${prov.name}</option>`;
+    provinsiSelect.innerHTML += `<option value="${prov.name}">${prov.name}</option>`;
   });
 }
 loadProvinsi();

@@ -179,7 +179,7 @@
                   berhutang."
                 </p>
                 <p class="mt-2 text-sm font-medium text-gray-800">
-                  – Siti, Medan
+                  – RIni, Medan
                 </p>
               </div>
             </div>
@@ -223,6 +223,7 @@
                 >
                 <input
                   type="text"
+                  name="namaLengkap"
                   required
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 />
@@ -233,6 +234,7 @@
                 >
                 <input
                   type="number"
+                  name="umur"
                   min="1"
                   required
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
@@ -256,6 +258,7 @@
                   >Alamat Lengkap</label
                 >
                 <textarea
+                  name="alamat"
                   required
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 ></textarea>
@@ -276,6 +279,7 @@
                 <input
                   type="number"
                   id="jumlahTanggungan"
+                  name="jumlahTanggungan"
                   min="0"
                   required
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
@@ -290,6 +294,7 @@
                 <select
                   required
                   id="punyaRumah"
+                  name="punyaRumah"
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 >
                   <option value="">Pilih</option>
@@ -303,7 +308,8 @@
                   Status rumah
                 </label>
                 <select
-                  required
+                  id="statusRumah"
+                  name="statusRumah"
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 >
                   <option value="">Pilih</option>
@@ -328,6 +334,7 @@
                 <select
                   required
                   id="bekerja"
+                  name="bekerja"
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 >
                   <option value="">Pilih</option>
@@ -335,13 +342,15 @@
                   <option value="tidak">Tidak</option>
                 </select>
               </div>
-              <div id="pendapatanIstriField" class="hidden">
+              <div id="pendapatanField" class="hidden">
                 <label class="block text-sm font-medium text-gray-600 mb-2"
                   >Pendapatan Anda per bulan</label
                 >
                 <input
                   type="number"
-                  required
+                  id="pendapatan"
+                  name="pendapatan"
+                  min="0"
                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
                 />
               </div>
