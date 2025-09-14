@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/script.js" defer></script>
-    <script src="js/nav.js" defer></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -26,8 +24,47 @@
     </script>
   </head>
   <body class="bg-pink-50 font-sans">
-    <!-- Navbar Section -->
-    <div id="navbar-container"></div>
+
+  <!-- Navigasi -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo/Main-Logo.png" alt="logo">
+        <span class="toher">To<span class="get">Get</span>Her</span>
+      </a>
+    </div>
+
+    <!-- Menu strip 3 -->
+    <input type="checkbox" id="menu-strrip3">
+    <label for="menu-strrip3" class="menu-icon">&#9776;</label>
+
+    <!-- Menu -->
+    <nav class="menu">
+      <div class="menu-content">
+        <label for="menu-strrip3" class="close-btn">&times;</label>
+        <!-- Profile Side Menu -->
+        <div class="profile">
+          <div class="avatar">S</div>
+          <p class="name">Sumiati</p>
+          <p class="user">Penerima Bantuan</p>
+        </div>
+        <ul>
+          <li><a href="index.html"  class="active">Beranda</a></li>
+          <li><a href="info-bantuan.html">Informasi Bantuan</a></li>
+          <li><a href="#">Testimoni</a></li>
+          <li><a href="#">Riwayat Bantuan</a></li>
+        </ul>
+      </div>
+      <span class="toher-side">To<span class="get">Get</span>Her</span>
+    </nav>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Profile Desktop -->
+    <div class="profile-desktop">
+      <div class="avatar-desktop">S</div>
+      <span class="name-desktop">Sumiati</span>
+    </div>
+  </header>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center text-center mx-auto px-6 md:px-10 lg:px-12 py-14 md:py-16 lg:py-20"

@@ -23,7 +23,6 @@
 
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
-    <script src="js/nav.js" defer></script>
     <script src="js/detail-bantuan.js" defer></script>
 
     <!-- SweetAlert -->
@@ -45,8 +44,47 @@
   </head>
 
   <body class="font-sans text-gray-800">
-    <!-- Navbar -->
-    <div id="navbar-container"></div>
+    <!-- Navigasi -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo/Main-Logo.png" alt="logo">
+        <span class="toher">To<span class="get">Get</span>Her</span>
+      </a>
+    </div>
+
+    <!-- Menu strip 3 -->
+    <input type="checkbox" id="menu-strrip3">
+    <label for="menu-strrip3" class="menu-icon">&#9776;</label>
+
+    <!-- Menu -->
+    <nav class="menu">
+      <div class="menu-content">
+        <label for="menu-strrip3" class="close-btn">&times;</label>
+        <!-- Profile Side Menu -->
+        <div class="profile">
+          <div class="avatar">S</div>
+          <p class="name">Sumiati</p>
+          <p class="user">Penerima Bantuan</p>
+        </div>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="info-bantuan.html">Informasi Bantuan</a></li>
+          <li><a href="#">Testimoni</a></li>
+          <li><a href="#">Riwayat Bantuan</a></li>
+        </ul>
+      </div>
+      <span class="toher-side">To<span class="get">Get</span>Her</span>
+    </nav>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Profile Desktop -->
+    <div class="profile-desktop">
+      <div class="avatar-desktop">S</div>
+      <span class="name-desktop">Sumiati</span>
+    </div>
+  </header>
+
 
     <!-- Content -->
     <main class="pt-16 pb-16 px-6 max-w-7xl mx-auto">
