@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Bantuan | ToGetHer</title>
+
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome (ikon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/detail-bantuan.js" defer></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans text-gray-800">
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Content -->
+    <main class="pt-16 pb-16 px-6 max-w-7xl mx-auto">
+      <!-- Judul & Info -->
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-bold text-[#6D123F]">Voucher Sembako</h2>
+        <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+          Program bantuan ekonomi berupa voucher sembako untuk keluarga kurang
+          mampu di berbagai wilayah Indonesia.
+        </p>
+      </div>
+
+      <!-- Gambar utama -->
+      <div class="mb-10">
+        <img
+          src="assets/images/bantuan/bantuan-5.jpg"
+          alt="Voucher Sembako"
+          class="w-full rounded-2xl shadow-lg"
+        />
+      </div>
+
+      <!-- Highlight Info -->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-10"
+      >
+        <!-- Kategori -->
+        <div
+          class="flex items-center p-2 sm:p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
+        >
+          <i
+            class="fa-solid fa-tags text-[#6D123F] text-base sm:text-xl mr-2 sm:mr-3"
+          ></i>
+          <div>
+            <p class="text-[10px] sm:text-xs text-[#6D123F]/80">Kategori</p>
+            <p class="font-semibold text-[#6D123F] text-sm sm:text-base">
+              Bantuan Ekonomi
+            </p>
+          </div>
+        </div>
+
+        <!-- Yayasan Donatur -->
+        <div
+          class="flex items-center p-2 sm:p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
+        >
+          <i
+            class="fa-solid fa-hand-holding-heart text-[#6D123F] text-base sm:text-xl mr-2 sm:mr-3"
+          ></i>
+          <div>
+            <p class="text-[10px] sm:text-xs text-[#6D123F]/80">Donatur</p>
+            <p class="font-semibold text-[#6D123F] text-sm sm:text-base">
+              Yayasan Peduli Negeri
+            </p>
+          </div>
+        </div>
+
+        <!-- Kuota -->
+        <div
+          class="flex items-center p-2 sm:p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
+        >
+          <i
+            class="fa-solid fa-users text-[#6D123F] text-base sm:text-xl mr-2 sm:mr-3"
+          ></i>
+          <div>
+            <p class="text-[10px] sm:text-xs text-[#6D123F]/80">Kuota</p>
+            <p class="font-semibold text-[#6D123F] text-sm sm:text-base">
+              500 Penerima
+            </p>
+          </div>
+        </div>
+
+        <!-- Periode -->
+        <div
+          class="flex items-center p-2 sm:p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
+        >
+          <i
+            class="fa-solid fa-calendar-days text-[#6D123F] text-base sm:text-xl mr-2 sm:mr-3"
+          ></i>
+          <div>
+            <p class="text-[10px] sm:text-xs text-[#6D123F]/80">Periode</p>
+            <p class="font-semibold text-[#6D123F] text-sm sm:text-base">
+              01 Jan 2025 – 31 Jan 2025
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail konten -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <!-- Artikel utama -->
+        <article
+          class="lg:col-span-2 space-y-8 bg-white p-6 rounded-2xl shadow-md"
+        >
+          <div>
+            <h3 class="text-xl font-semibold mb-2 text-[#6D123F]">Deskripsi</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Program
+              <span class="font-semibold">Voucher Sembako</span> merupakan salah
+              satu bentuk bantuan ekonomi yang diberikan kepada keluarga kurang
+              mampu, khususnya perempuan kepala rumah tangga. Program ini
+              bertujuan untuk meringankan beban kebutuhan pokok sehari-hari dan
+              meningkatkan ketahanan pangan keluarga. <br /><br />
+              Setiap penerima bantuan berhak mendapatkan
+              <span class="font-semibold">voucher senilai Rp 500.000</span>
+              yang dapat ditukarkan dengan kebutuhan pokok (beras, minyak
+              goreng, telur, gula, dll.) di minimarket maupun pasar tradisional
+              yang telah bekerja sama dengan ToGetHer.
+              <br /><br />
+              Dengan adanya program ini, diharapkan keluarga penerima tidak
+              hanya dapat memenuhi kebutuhan dasar, tetapi juga memiliki
+              kesempatan untuk lebih fokus pada pengembangan keluarga,
+              pendidikan anak, serta peningkatan kualitas hidup.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold mb-3 text-[#6D123F]">
+              Syarat & Ketentuan
+            </h3>
+            <div class="grid gap-3 sm:gap-4">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-[#6D123F] mt-1"></i>
+                <p class="text-gray-700">
+                  Berstatus
+                  <span class="font-medium">keluarga kurang mampu</span> dengan
+                  penghasilan di bawah Rp 2.000.000 per bulan.
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-[#6D123F] mt-1"></i>
+                <p class="text-gray-700">
+                  Memiliki <span class="font-medium">KTP</span> dan
+                  <span class="font-medium">KK</span> yang masih berlaku.
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-[#6D123F] mt-1"></i>
+                <p class="text-gray-700">
+                  Belum menerima bantuan serupa dari program pemerintah/lembaga
+                  lain dalam periode yang sama.
+                </p>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-[#6D123F] mt-1"></i>
+                <p class="text-gray-700">
+                  Voucher hanya berlaku pada periode program yang telah
+                  ditentukan dan tidak dapat diuangkan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+          <!-- Box Info -->
+          <div class="bg-white border rounded-2xl shadow-md p-6">
+            <h4 class="font-semibold text-lg mb-3 text-[#6D123F]">
+              Dukungan Ini Hadir Untukmu
+            </h4>
+            <p class="text-sm text-gray-600 mb-4">
+              Daftarkan dirimu sekarang dan akses bantuan dengan mudah.
+            </p>
+            <button
+              id="openModal"
+              class="block w-full text-center bg-[#6D123F] text-white px-4 py-2 rounded-xl transition transform hover:bg-pink-700 hover:scale-95"
+            >
+              Daftar Sekarang
+            </button>
+          </div>
+
+          <!-- Testimoni Penerima Lain -->
+          <div class="bg-white rounded-2xl shadow-md p-6">
+            <h4 class="font-semibold text-lg mb-3 text-[#6D123F]">
+              Testimoni Penerima Lain
+            </h4>
+            <div class="space-y-4">
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Bantuan ini sangat meringankan beban keluarga saya."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – Siti, Jakarta
+                </p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Saya sangat terbantu karena bisa mencukupi kebutuhan pangan
+                  keluarga saya."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – Ayu, Bandung
+                </p>
+              </div>
+              <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                <p class="text-sm text-gray-700 italic">
+                  "Voucher sembako ini membuat saya lebih tenang, karena
+                  kebutuhan pokok anak-anak bisa tercukupi tanpa harus
+                  berhutang."
+                </p>
+                <p class="mt-2 text-sm font-medium text-gray-800">
+                  – RIni, Medan
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- MODAL -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2000]"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-4 sm:p-8 mx-4 relative max-h-[90vh] overflow-y-auto"
+      >
+        <!-- Tombol Close -->
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl"
+        >
+          ✕
+        </button>
+
+        <!-- Judul -->
+        <h2 class="text-2xl font-bold text-[#6D123F] mb-6 text-center">
+          Formulir Pendaftaran Bantuan
+        </h2>
+
+        <form id="daftarForm" class="space-y-8">
+          <!-- Step 1 -->
+          <div class="step" id="step1">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">Data Diri</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  name="namaLengkap"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Umur</label
+                >
+                <input
+                  type="number"
+                  name="umur"
+                  min="1"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Provinsi</label
+                >
+                <select
+                  required
+                  id="provinsi"
+                  name="provinsi"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih Provinsi</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Alamat Lengkap</label
+                >
+                <textarea
+                  name="alamat"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step hidden" id="step2">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">
+              Kondisi Keluarga
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Jumlah Tanggungan
+                </label>
+                <input
+                  type="number"
+                  id="jumlahTanggungan"
+                  name="jumlahTanggungan"
+                  min="0"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div id="tanggunganContainer" class="space-y-4"></div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Apakah memiliki rumah?
+                </label>
+                <select
+                  required
+                  id="punyaRumah"
+                  name="punyaRumah"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="ya">Ya</option>
+                  <option value="tidak">Tidak</option>
+                </select>
+              </div>
+
+              <div id="statusRumahField" class="hidden">
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Status rumah
+                </label>
+                <select
+                  id="statusRumah"
+                  name="statusRumah"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="milik">Milik Sendiri</option>
+                  <option value="kontrak">Kontrak / Sewa</option>
+                  <option value="numpang">Menumpang</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step hidden" id="step3">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">
+              Kondisi Ekonomi
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Apakah Anda bekerja?</label
+                >
+                <select
+                  required
+                  id="bekerja"
+                  name="bekerja"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="ya">Ya</option>
+                  <option value="tidak">Tidak</option>
+                </select>
+              </div>
+              <div id="pendapatanField" class="hidden">
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Pendapatan Anda per bulan</label
+                >
+                <input
+                  type="number"
+                  id="pendapatan"
+                  name="pendapatan"
+                  min="0"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigasi -->
+          <div class="flex justify-between pt-6 border-t">
+            <button
+              type="button"
+              id="prevBtn"
+              class="px-5 py-2 border border-[#6D123F] text-[#6D123F] rounded-lg transition transform hover:bg-[#6D123F] hover:text-white hover:scale-95 hidden"
+            >
+              Kembali
+            </button>
+            <button
+              type="button"
+              id="nextBtn"
+              class="ml-auto px-5 py-2 bg-[#6D123F] text-white rounded-lg transition transform hover:bg-pink-700 hover:scale-95"
+            >
+              Selanjutnya
+            </button>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="ml-auto hidden px-5 py-2 bg-[#6D123F] text-white rounded-lg transition transform hover:bg-pink-700 hover:scale-95"
+            >
+              Kirim Pendaftaran
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

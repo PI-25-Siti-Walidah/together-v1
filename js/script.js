@@ -1,5 +1,6 @@
 //LOOPING LOGO PARTNER
 const track = document.getElementById("partner-track");
+if (track) {
   let scrollAmount = 0;
 
   function scrollLogos() {
@@ -13,19 +14,24 @@ const track = document.getElementById("partner-track");
 
   track.innerHTML += track.innerHTML;
   setInterval(scrollLogos, 20);
+}
 
-//Bantuan Terkini
-  const scrollBox = document.getElementById('bantuanScroll');
-  function scrollLeft() {
-    scrollBox.scrollBy({ left: -300, behavior: 'smooth' });
+// Bantuan Terkini
+const scrollBox = document.getElementById("bantuanScroll");
+function scrollLeft() {
+  if (scrollBox) {
+    scrollBox.scrollBy({ left: -300, behavior: "smooth" });
   }
-  function scrollRight() {
-    scrollBox.scrollBy({ left: 300, behavior: 'smooth' });
+}
+function scrollRight() {
+  if (scrollBox) {
+    scrollBox.scrollBy({ left: 300, behavior: "smooth" });
   }
+}
 
 // Footer loader
 fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
+  .then((res) => res.text())
+  .then((data) => {
     document.getElementById("footer").innerHTML = data;
   });
