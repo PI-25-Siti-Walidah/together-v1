@@ -85,3 +85,15 @@ jumlahTanggungan.addEventListener("input", (e) => {
     `;
   }
 });
+
+async function loadProvinsi() {
+  const res = await fetch(
+    "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json"
+  );
+  const data = await res.json();
+  const provinsiSelect = document.getElementById("provinsi");
+  data.forEach((prov) => {
+    provinsiSelect.innerHTML += `<option value="${prov.id}">${prov.name}</option>`;
+  });
+}
+loadProvinsi();
