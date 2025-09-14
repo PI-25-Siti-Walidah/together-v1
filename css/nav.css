@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     background: #fff8fa;
-    padding: 16px 32px;
+    padding: 16px 96px;
     border-bottom: 1px solid #e5e5e5;
     position: sticky;
     top: 0;
@@ -12,7 +12,7 @@
 }
 
 /* Logo */
-.logo a{
+.logo a {
     display: flex;
     align-items: center;
     font-size: 25px;
@@ -24,9 +24,11 @@
     width: 40px;
     margin-right: 8px;
 }
+
 .logo .toher {
     color: #313131;
 }
+
 .logo .get {
     color: #6D123F;
 }
@@ -37,21 +39,25 @@
     align-items: center;
     gap: 32px;
 }
+
 .menu ul {
     display: flex;
     list-style: none;
     gap: 32px;
 }
+
 .menu a {
     text-decoration: none;
     color: #6D123F;
     font-weight: 500;
     transition: 0.3s;
 }
+
 .menu a.active {
     border-bottom: 2px solid #6D123F;
     padding-bottom: 4px;
 }
+
 .menu a:hover {
     color: #313131;
 }
@@ -72,6 +78,9 @@
 .close-btn {
     display: none;
 }
+.toher-side{
+    display: none;
+}
 
 /* Profile Desktop */
 .profile-desktop {
@@ -79,6 +88,7 @@
     align-items: center;
     gap: 10px;
 }
+
 .avatar-desktop {
     width: 40px;
     height: 40px;
@@ -91,8 +101,9 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .name-desktop {
-    font-weight: bold;
+    font-weight: 600;
     color: #6D123F;
 }
 
@@ -101,7 +112,23 @@
     display: none;
 }
 
+/* Overlay background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 50;
+}
+
+
 @media (max-width: 768px) {
+    .navbar {
+        padding: 16px 32px;
+    }
 
     /* Sembunyikan menu utama */
     .menu {
@@ -112,10 +139,12 @@
         height: 100%;
         background: #FFF9F7;
         flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
         padding: 32px;
         gap: 25px;
         transition: 0.3s ease;
+        z-index: 100;
     }
 
     /* Tampilkan sidebar saat checkbox aktif */
@@ -123,9 +152,15 @@
         right: 0;
     }
 
+
+    /* Saat menu aktif, overlay muncul */
+    #menu-strrip3:checked~.overlay {
+        display: block;
+    }
+
     /* Tombol close */
     .close-btn {
-        align-self: flex-end;
+        text-align: right;
         font-size: 32px;
         cursor: pointer;
         margin-bottom: 16px;
@@ -152,7 +187,7 @@
         font-weight: bold;
         color: #541b35;
     }
-    .role {
+    .user {
         font-size: 15px;
         color: #777;
     }
@@ -162,13 +197,30 @@
         flex-direction: column;
         gap: 16px;
     }
+
     /* Hamburger muncul */
     .menu-icon {
         display: block;
     }
+
     .profile,
     .close-btn {
         display: block;
+    }
+
+    .toher-side {
+        color: #313131;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Playfair+Display";
+    }
+
+    .toher-side{
+    display: block;
+}
+
+    .get {
+        color: #6D123F;
     }
 
     /* Sembunyikan profile desktop di hp */
