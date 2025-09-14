@@ -189,5 +189,184 @@
 
     <!-- Footer -->
     <footer id="footer"></footer>
+
+    <!-- MODAL -->
+    <div
+      id="modal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[2000]"
+    >
+      <div
+        class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-4 sm:p-8 mx-4 relative max-h-[90vh] overflow-y-auto"
+      >
+        <!-- Tombol Close -->
+        <button
+          id="closeModal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl"
+        >
+          ✕
+        </button>
+
+        <!-- Judul -->
+        <h2 class="text-2xl font-bold text-[#6D123F] mb-6 text-center">
+          Formulir Pendaftaran Bantuan
+        </h2>
+
+        <form id="daftarForm" class="space-y-8">
+          <!-- Step 1 -->
+          <div class="step" id="step1">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">Data Diri</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Umur</label
+                >
+                <input
+                  type="number"
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Provinsi</label
+                >
+                <select
+                  required
+                  id="provinsi"
+                  name="provinsi"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih Provinsi</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Alamat Lengkap</label
+                >
+                <textarea
+                  required
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step hidden" id="step2">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">
+              Kondisi Keluarga
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Jumlah Tanggungan
+                </label>
+                <input
+                  type="number"
+                  id="jumlahTanggungan"
+                  min="0"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+              <div id="tanggunganContainer" class="space-y-4"></div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Apakah memiliki rumah?
+                </label>
+                <select
+                  id="punyaRumah"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="ya">Ya</option>
+                  <option value="tidak">Tidak</option>
+                </select>
+              </div>
+
+              <div id="statusRumahField" class="hidden">
+                <label class="block text-sm font-medium text-gray-600 mb-2">
+                  Status rumah
+                </label>
+                <select
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="milik">Milik Sendiri</option>
+                  <option value="kontrak">Kontrak / Sewa</option>
+                  <option value="numpang">Menumpang</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step hidden" id="step3">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700">
+              Kondisi Ekonomi
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Apakah Anda bekerja?</label
+                >
+                <select
+                  id="bekerja"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                >
+                  <option value="">Pilih</option>
+                  <option value="ya">Ya</option>
+                  <option value="tidak">Tidak</option>
+                </select>
+              </div>
+              <div id="pendapatanIstriField" class="hidden">
+                <label class="block text-sm font-medium text-gray-600 mb-2"
+                  >Pendapatan Anda per bulan</label
+                >
+                <input
+                  type="number"
+                  class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:border-[#6D123F]"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigasi -->
+          <div class="flex justify-between pt-6 border-t">
+            <button
+              type="button"
+              id="prevBtn"
+              class="px-5 py-2 border border-[#6D123F] text-[#6D123F] rounded-lg hover:bg-[#6D123F] hover:text-white hidden"
+            >
+              Kembali
+            </button>
+            <button
+              type="button"
+              id="nextBtn"
+              class="ml-auto px-5 py-2 bg-[#6D123F] text-white rounded-lg hover:bg-[#5a0f33]"
+            >
+              Selanjutnya
+            </button>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="ml-auto hidden px-5 py-2 bg-[#6D123F] text-white rounded-lg hover:bg-[#5a0f33]"
+            >
+              Kirim Pendaftaran
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
