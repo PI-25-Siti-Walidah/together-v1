@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Info Bantuan | ToGetHer</title>
+  <!-- CSS footer -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Link Font Wordmark  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- CSS Navbar -->
+  <link rel="stylesheet" href="css/nav.css">
+  <!-- Link Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link script.js -->
+  <script src="js/script.js" defer></script>
+</head>
+
+<body class="bg-pink-50 font-sans">
+
+  <!-- Navigasi -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo/Main-Logo.png" alt="logo">
+        <span class="toher">To<span class="get">Get</span>Her</span>
+      </a>
+    </div>
+
+    <!-- Menu strip 3 -->
+    <input type="checkbox" id="menu-strrip3">
+    <label for="menu-strrip3" class="menu-icon">&#9776;</label>
+
+    <!-- Menu -->
+    <nav class="menu">
+      <div class="menu-content">
+        <label for="menu-strrip3" class="close-btn">&times;</label>
+        <!-- Profile Side Menu -->
+        <div class="profile">
+          <div class="avatar">S</div>
+          <p class="name">Sumiati</p>
+          <p class="user">Penerima Bantuan</p>
+        </div>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="info-bantuan.html" class="active">Informasi Bantuan</a></li>
+          <li><a href="#">Testimoni</a></li>
+          <li><a href="#">Riwayat Bantuan</a></li>
+        </ul>
+      </div>
+      <span class="toher-side">To<span class="get">Get</span>Her</span>
+    </nav>
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Profile Desktop -->
+    <div class="profile-desktop">
+      <div class="avatar-desktop">S</div>
+      <span class="name-desktop">Sumiati</span>
+    </div>
+  </header>
+
+  <!-- Ini menampilkan filter informasi bantuan -->
+  <div class="flex flex-col items-center py-14 px-4">
+    <!-- Judul dan descripsinya -->
+    <div class="w-full max-w-3xl text-center mx-auto">
+      <h1 class="font-bold text-3xl md:text-4xl text-[#701A42] p-2">Informasi Bantuan</h1>
+      <p class="text-base md:text-lg text-[#701A42] mb-6">Temukan informasi bantuan yang sesuai dengan kebutuhan dan
+        situasi Anda.</p>
+      <!-- Ini div untuk dropdown -->
+      <div class="drop-down flex justify-center">
+        <select name="filter-bantuan" id="filter-bantuan" class="rounded-md block w-full mx-auto rounded-md border border-[#701A42] px-4 py-3 pr-10 text-[#701A42] appearance-none
+                 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <!-- Ini kategori dropdown yg bisa kamu pilih -->
+          <option value="pilih-kategori" disabled selected class="text-[#701A42]">Pilih Kategori</option>
+          <option value="all">Semua Kategori</option>
+          <option value="bantuan-ekonomi" class="text-[#701A42]">Bantuan Ekonomi</option>
+          <option value="kesehatan" class="text-[#701A42]">Kesehatan</option>
+          <option value="modal-usaha" class="text-[#701A42]">Modal Usaha</option>
+          <option value="pelatihan" class="text-[#701A42]">Pelatihan</option>
+          <option value="pendidikan-anak" class="text-[#701A42]">Pendidikan Anak</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ini menampilkan card/macam2 informasi bantuan -->
+  <div class="flex flex-wrap justify-center gap-6 p-4">
+
+    <!-- CARD 1 -->
+    <div
+      class="card1 w-full md:w-1/2 lg:w-1/3 max-w-[350px] h-auto flex flex-col rounded-lg border border-gray-400 m-0 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer"
+      data-category="bantuan-ekonomi">
+      <img src="assets/images/bantuan/bantuan-5.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md object-cover">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-1.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Perempuan Indoseia Sejahtera</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Bantuan Ekonomi</p>
+          <h3 class="text-xl font-bold">Voucher Sembako</h3>
+          <p class="text-xs text-[#701A42] ">10 Testimoni penerima</p>
+        </div>
+        <button onclick="window.location.href='detail-bantuan.html'"
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+
+
+    <!-- CARD 2 -->
+    <div
+      class="card2 w-full md:w-1/2 lg:w-1/3 max-w-[350px] h-auto flex flex-col rounded-lg border border-gray-400 m-0 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer"
+      data-category="kesehatan">
+      <img src="assets/images/bantuan/bantuan-1.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md object-cover">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-2.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Perempuan Indoseia Sejahtera</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Kesehatan</p>
+          <h3 class="text-xl font-bold">Medical Checkup</h3>
+          <p class="text-xs text-[#701A42] ">47 Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div
+      class="card3 w-full md:w-1/2 lg:w-1/3 max-w-[350px] h-auto flex flex-col rounded-lg border border-gray-400 m-0 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer"
+      data-category="pendidikan-anak">
+      <img src="assets/images/bantuan/bantuan-2.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md object-cover">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-1.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Perempuan Sehat</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Pendidikan Anak</p>
+          <h3 class="text-xl font-bold">Dana Bantuan Seragam Sekolah</h3>
+          <p class="text-xs text-[#701A42] ">100+ Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div
+      class="card4 w-full md:w-1/2 lg:w-1/3 max-w-[350px] h-auto flex flex-col rounded-lg border border-gray-400 m-0 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer"
+      data-category="modal-usaha">
+      <img src="assets/images/bantuan/bantuan-3.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md object-cover">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-3.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Indoseia</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Modal Usaha</p>
+          <h3 class="text-xl font-bold">Suntik Dana</h3>
+          <p class="text-xs text-[#701A42] ">8 Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div
+      class="card5 w-full md:w-1/2 lg:w-1/3 max-w-[350px] h-auto flex flex-col rounded-lg border border-gray-400 m-0 transform transition duration-200 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner cursor-pointer"
+      data-category="pelatihan">
+      <img src="assets/images/bantuan/bantuan-4.jpg" alt="gambar-bantuan-1" class="w-full h-60 rounded-md object-cover">
+      <!-- ini berisi seluruh text -->
+      <div class="flex flex-col p-4">
+        <!-- ini berisi logo dan nama perusahaan -->
+        <div class="flex items-center gap-4 mb-2">
+          <img src="assets/images/perusahan-logo/p-logo-2.png" alt="logo perusahaan" class="w-7 h-7 rounded-full">
+          <p class="text-sm">Yayasan Perempuan Sehat</p>
+        </div>
+        <!-- ini berisi kategori, judul, testimoni -->
+        <div class="gap-2 mb-4">
+          <p class="text-sm text-[#701A42] font-semibold">Pelatihan</p>
+          <h3 class="text-xl font-bold">Dasar Menjahit</h3>
+          <p class="text-xs text-[#701A42] ">200+ Testimoni penerima</p>
+        </div>
+        <button
+          class="mt-4 w-full py-2 bg-[#701A42] text-white rounded-xl font-semibold transition transform hover:bg-pink-700 hover:scale-95">
+          Detail Bantuan
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menampilkan footer -->
+  <div id="footer"></div>
+  <!-- JavaScript untuk filter-->
+  <script src="js/filter.js"></script>
+</body>
+
+</html>
