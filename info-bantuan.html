@@ -15,23 +15,62 @@
   <link rel="stylesheet" href="css/nav.css">
   <!-- Link Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Link script.js -->
+  <script src="js/script.js" defer></script>
 </head>
 
 <body class="bg-pink-50 font-sans">
 
-  <!-- Ini tempat navbar otomatis -->
-  <div id="navbar-container"></div>
+  <!-- Navigasi -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/images/logo/Main-Logo.png" alt="logo">
+        <span class="toher">To<span class="get">Get</span>Her</span>
+      </a>
+    </div>
+
+    <!-- Menu strip 3 -->
+    <input type="checkbox" id="menu-strrip3">
+    <label for="menu-strrip3" class="menu-icon">&#9776;</label>
+
+    <!-- Menu -->
+    <nav class="menu">
+      <label for="menu-strrip3" class="close-btn">&times;</label>
+      <!-- Profile Side Menu -->
+      <div class="profile">
+        <div class="avatar">S</div>
+        <p class="name">Sumiati</p>
+        <p class="role">Penerima Bantuan</p>
+      </div>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="info-bantuan.html" class="active">Informasi Bantuan</a></li>
+        <li><a href="#">Testimoni</a></li>
+        <li><a href="#">Riwayat Bantuan</a></li>
+      </ul>
+    </nav>
+    <!-- Profile Desktop -->
+    <div class="profile-desktop">
+      <div class="avatar-desktop">S</div>
+      <span class="name-desktop">Sumiati</span>
+    </div>
+  </header>
 
   <!-- Ini menampilkan filter informasi bantuan -->
   <div class="flex flex-col items-center py-14 px-4">
+    <!-- Judul dan descripsinya -->
     <div class="w-full max-w-3xl text-center mx-auto">
       <h1 class="font-bold text-3xl md:text-4xl text-[#701A42] p-2">Informasi Bantuan</h1>
       <p class="text-base md:text-lg text-[#701A42] mb-6">Temukan informasi bantuan yang sesuai dengan kebutuhan dan
         situasi Anda.</p>
+      <!-- Ini div untuk dropdown -->
       <div class="drop-down flex justify-center">
         <select name="filter-bantuan" id="filter-bantuan" class="rounded-md block w-full mx-auto rounded-md border border-[#701A42] px-4 py-3 pr-10 text-[#701A42] appearance-none
                  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <!-- Ini kategori dropdown yg bisa kamu pilih -->
           <option value="pilih-kategori" disabled selected class="text-[#701A42]">Pilih Kategori</option>
+          <option value="all">Semua Kategori</option>
           <option value="bantuan-ekonomi" class="text-[#701A42]">Bantuan Ekonomi</option>
           <option value="kesehatan" class="text-[#701A42]">Kesehatan</option>
           <option value="modal-usaha" class="text-[#701A42]">Modal Usaha</option>
@@ -172,9 +211,9 @@
     </div>
   </div>
 
+  <!-- Menampilkan footer -->
   <div id="footer"></div>
-  <!-- Script Navbar -->
-  <script src="js/nav.js"></script>
+  <!-- JavaScript untuk filter-->
   <script src="js/filter.js"></script>
 </body>
 

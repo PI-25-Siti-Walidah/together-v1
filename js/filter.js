@@ -1,19 +1,34 @@
+// Filter Kategori Bantuan
 document.addEventListener('DOMContentLoaded', function () {
-  const select = document.getElementById('filter-bantuan');
+  var select = document.getElementById('filter-bantuan');
   if (!select) return;
-  const cards = Array.from(document.querySelectorAll('[data-category]'));
+  var cards = document.querySelectorAll('[data-category]');
 
+  // function untuk meng filter
   function applyFilter(value) {
+    var i;
     if (!value || value === 'pilih-kategori' || value === 'all') {
-      cards.forEach(c => c.classList.remove('hidden'));
+      for (i = 0; i < cards.length; i++) {
+        cards[i].classList.remove('hidden');
+      }
       return;
     }
-    cards.forEach(c => {
-      const cat = (c.getAttribute('data-category') || '').toLowerCase();
-      c.classList.toggle('hidden', cat !== value.toLowerCase());
-    });
-  }
 
+    //loop cek tiap card apakah kategorinya sama dengan value
+    for (i = 0; i < cards.length; i++) {
+      var cek = (cards[i].getAttribute('data-category') || '').toLowerCase();
+      if (cek === value.toLowerCase()) {
+        cards[i].classList.remove('hidden');
+      } else {
+        cards[i].classList.add('hidden');
+      }
+    }
+  }
+  // Menerapkan filter katerori sesuai pilihan
   applyFilter(select.value);
-  select.addEventListener('change', e => applyFilter(e.target.value));
+
+  // Event listener untuk dropdown
+  select.addEventListener('change', function () {
+    applyFilter(this.value);
+  });
 });
