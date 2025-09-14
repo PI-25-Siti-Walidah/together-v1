@@ -121,9 +121,9 @@ jumlahTanggungan.addEventListener("input", (e) => {
       <div class="border p-3 rounded-lg">
         <h4 class="font-semibold mb-2">Tanggungan ${i}</h4>
         <label class="block text-sm">Umur</label>
-        <input type="number" name="tanggunganUmur${i}" class="w-full border rounded px-3 py-2 mb-2" required />
+        <input type="number" name="umurTanggungan${i}" class="w-full border rounded px-3 py-2 mb-2" required />
         <label class="block text-sm">Status</label>
-        <select name="tanggunganStatus${i}" class="w-full border rounded px-3 py-2 mb-2" required>
+        <select name="statusTanggungan${i}" class="w-full border rounded px-3 py-2 mb-2" required>
           <option value="">Pilih</option>
           <option value="sekolah">Ber-sekolah</option>
           <option value="tidak">Tidak</option>
@@ -132,6 +132,44 @@ jumlahTanggungan.addEventListener("input", (e) => {
     `;
   }
 });
+
+// Handle submit
+document
+  .getElementById("daftarForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    if (!validateStep(currentStep)) return;
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch(
+        "https://68c228eff9928dbf33ed7959.mockapi.io/together/pendaftaran",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!res.ok) throw new Error("Gagal menyimpan data");
+
+      const result = await res.json();
+      console.log("Data tersimpan:", result);
+
+      showMessage("Pendaftaran berhasil disimpan!", "success");
+
+      modal.classList.add("hidden");
+      this.reset();
+    } catch (err) {
+      console.error(err);
+      showMessage("Terjadi kesalahan saat menyimpan data.", "error");
+    }
+  });
 
 async function loadProvinsi() {
   const res = await fetch(
